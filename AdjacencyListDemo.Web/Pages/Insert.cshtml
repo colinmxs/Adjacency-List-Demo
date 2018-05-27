@@ -1,5 +1,5 @@
 ﻿@page
-@model AdjacenyListDemo.Web.Pages.InsertModel
+@model AdjacencyListDemo.Web.Pages.InsertModel
 @{
   ViewData["Title"] = "Insert";
 }
@@ -7,7 +7,7 @@
 <h1>Adjacency List Insert POC</h1>
 <p>Use the form below to insert nodes into the graph.</p>
 <hr />
-<form class="form-horizontal">
+<form class="form-horizontal" method="POST">
   <div asp-validation-summary="All"></div>
   <div class="form-group">
     <label for="id-input" class="col-sm-2 control-label">Id</label>
