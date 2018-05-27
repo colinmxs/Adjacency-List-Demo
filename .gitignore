@@ -4,6 +4,5 @@
 
 /bin/Debug/netcoreapp2.0
 /obj
-/wwwroot/lib
 /wwwroot/css/site.min.css
 /wwwroot/js/site.min.js
