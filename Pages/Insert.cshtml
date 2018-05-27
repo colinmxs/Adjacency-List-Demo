@@ -1,0 +1,56 @@
+﻿@page
+@model AdjacenyListDemo.Web.Pages.InsertModel
+@{
+  ViewData["Title"] = "Insert";
+}
+
+<h1>Adjacency List Insert POC</h1>
+<p>Use the form below to insert nodes into the graph.</p>
+<hr />
+<form class="form-horizontal">
+  <div asp-validation-summary="All"></div>
+  <div class="form-group">
+    <label for="id-input" class="col-sm-2 control-label">Id</label>
+    <div class="col-sm-3">
+      <input asp-for="Id" type="text" class="form-control" id="id-input" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="index-select-list" class="col-sm-2 control-label">Type</label>
+    <div class="col-sm-3">
+      <select asp-for="Type" class="form-control" id="type-select-list">
+        <option value="Person">
+          Person
+        </option>
+        <option value="Topic">
+          Topic
+        </option>
+        <option value="Post">
+          Post
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="data-input" class="col-sm-2 control-label">Data</label>
+    <div class="col-sm-3">
+      <input asp-for="Data" type="text" class="form-control" id="data-input" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="targets-input" class="col-sm-2 control-label">Targets</label>
+    <div class="col-sm-3">
+      <input asp-for="Targets" type="text" class="form-control" id="targets-input" />
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Insert</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,98 @@
+﻿@page
+@using Amazon.DynamoDBv2.DocumentModel;
+@model IndexModel
+@{
+  ViewData["Title"] = "Home page";
+}
+<h1>Adjacency List Query/Scan POC</h1>
+<p>Use the form below to query and scan the graph. <a asp-page="insert">Click here to insert items into the graph</a></p>
+<hr />
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="index-select-list" class="col-sm-2 control-label">Index</label>
+    <div class="col-sm-3">
+      <select asp-for="Index" class="form-control" id="index-select-list">
+        <option value="">
+          Main Table
+        </option>
+        <option value="Type-Data-index">
+          Type-Data-index
+        </option>
+        <option value="Range-Hash-index">
+          Range-Hash-index
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="partition-key-value" class="col-sm-2 control-label">Partition Key Value</label>
+    <div class="col-sm-3">
+      <input asp-for="PartitionKey" type="text" class="form-control" id="partition-key-value" placeholder="(leave blank for Scan)">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="sort-key-value" class="col-sm-2 control-label">Sort Key Value</label>
+    <div class="col-sm-3">
+      <input asp-for="RangeKey" type="text" class="form-control" id="sort-key-value" placeholder="(leave blank for Scan)">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="sort-key-operator-select-list" class="col-sm-2 control-label">Sort Key Operator</label>
+    <div class="col-sm-3">
+      <select asp-for="Operator" class="form-control" id="sort-key-operator-select-list">
+        <option value="@QueryOperator.Equal">
+          Equals
+        </option>
+        <option value="@QueryOperator.Between">
+          Between
+        </option>
+        <option value="@QueryOperator.GreaterThan">
+          Greater Than
+        </option>
+        <option value="@QueryOperator.GreaterThanOrEqual">
+          Greater Than Or Equal
+        </option>
+        <option value="@QueryOperator.LessThan">
+          Less Than
+        </option>
+        <option value="@QueryOperator.LessThanOrEqual">
+          Less Than Or Equal
+        </option>
+        <option value="@QueryOperator.BeginsWith">
+          Begins With
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Execute Query/Scan</button>
+    </div>
+  </div>
+</form>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Partition Key</th>
+        <th>Range Key</th>
+        <th>Type</th>
+        <th>Data</th>
+        <th>Created DateTime</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var item in Model.Results)
+      {
+        <tr>
+          <th scope="row">@item.HASH</th>
+          <td>@item.RANGE</td>
+          <td>@item.Type</td>
+          <td>@item.Data</td>
+          <td>@item.CreatedDateTime</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
