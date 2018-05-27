@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AdjacenyListDemo.Web.Pages
+namespace AdjacencyListDemo.Web.Pages
 {
     public class ErrorModel : PageModel
     {

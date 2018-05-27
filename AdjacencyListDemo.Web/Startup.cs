@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AdjacenyListDemo.Web.Infrastructure;
+using AdjacencyListDemo.Web.Infrastructure;
 using Amazon.DynamoDBv2;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AdjacenyListDemo.Web
+namespace AdjacencyListDemo.Web
 {
     public class Startup
     {

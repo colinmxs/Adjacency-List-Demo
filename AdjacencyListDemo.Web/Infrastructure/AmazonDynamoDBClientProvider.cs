@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AdjacenyListDemo.Web.Infrastructure
+namespace AdjacencyListDemo.Web.Infrastructure
 {
     public class AmazonDynamoDBClientProvider
     {

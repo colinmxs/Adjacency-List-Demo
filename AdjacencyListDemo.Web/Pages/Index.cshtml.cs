@@ -9,7 +9,7 @@ using Amazon.DynamoDBv2.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AdjacenyListDemo.Web.Pages
+namespace AdjacencyListDemo.Web.Pages
 {
     public class IndexModel : PageModel
     {

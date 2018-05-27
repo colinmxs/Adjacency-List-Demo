@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using AdjacenyListDemo.Web.Infrastructure;
+using AdjacencyListDemo.Web.Infrastructure;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace AdjacenyListDemo.Web
+namespace AdjacencyListDemo.Web
 {
     public class Program
     {
