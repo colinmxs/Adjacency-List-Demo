@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AdjacenyListDemo.Web.Domain
+namespace AdjacencyListDemo.Web.Domain
 {
     public class Item
     {

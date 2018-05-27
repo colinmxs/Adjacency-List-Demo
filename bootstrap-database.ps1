@@ -29,7 +29,7 @@ if(Test-Path $localDbFolder){
     New-Item -ItemType Directory $localDbFolder
 
     Write-Output "Extracting zip contents at $zipFileLocation..."
-    Add-Type -assembly “system.io.compression.filesystem”
+    Add-Type -assembly ï¿½system.io.compression.filesystemï¿½
 	Expand-Archive $zipFileLocation -DestinationPath $localDbFolder    
 }
 
@@ -60,8 +60,8 @@ Else {
 }
 
 
-$projectPath = "$pwd\AdjacenyListDemo.Web"
-$project = "$projectPath\AdjacenyListDemo.Web.csproj"
+$projectPath = "$pwd\AdjacencyListDemo.Web"
+$project = "$projectPath\AdjacencyListDemo.Web.csproj"
 
 Write-Output "Bootstrapping database..."
 dotnet run --project $project -- bootstrapdb

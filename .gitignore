@@ -2,7 +2,11 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/bin/Debug/netcoreapp2.0
-/obj
-/wwwroot/css/site.min.css
-/wwwroot/js/site.min.js
+/AdjacencyListDemo.Web/bin/Debug/netcoreapp2.0
+/AdjacencyListDemo.Web/obj
+/AdjacencyListDemo.Web/wwwroot/css/site.min.css
+/AdjacencyListDemo.Web/wwwroot/js/site.min.js
+.vscode/launch.json
+.vscode/tasks.json
+/DynamoDb
+dynamoDb.zip
