@@ -93,7 +93,7 @@ namespace AdjacencyListDemo.Web.Pages
                     queryFilter.AddCondition("HASH", QueryOperator.Equal, PartitionKey);
                     if (!string.IsNullOrEmpty(RangeKey))
                     {
-                        queryFilter.AddCondition("RANGE", Operator, "Person");
+                        queryFilter.AddCondition("RANGE", Operator, RangeKey);
                     }
                 }
                 queryConfig.Filter = queryFilter;
